@@ -9,6 +9,10 @@ Non-code material for the NovaMart multi-agent customer support submission.
 | [`120.png`](120.png) | `python tests/test_agent.py all` with every check passing and a score of 120/120 | Terminal screenshot |
 | [`120.txt`](120.txt) | Full text output of the same test run | Terminal output |
 | [`trace1.png`](trace1.png) – [`trace4.png`](trace4.png) | CloudWatch → X-Ray Trace Map: `NovaMart-Orchestrator` connected to InventoryAgent, PolicyAgent, RefundAgent, CommunicationAgent and the `KnowledgeBase:returns/shipping/warranty` nodes | Console screenshots after `python src/agent_orchestrator.py test` |
+| [`trace5.png`](trace5.png) | CloudWatch → Traces: the three traces of that run with per-node latency (all OK, no faults) | Console screenshot |
+| [`trace6.png`](trace6.png) | Return request trace: Orchestrator → InventoryAgent → RefundAgent → CommunicationAgent, with every tool span | Console screenshot |
+| [`trace7.png`](trace7.png) | Policy question trace: Orchestrator → PolicyAgent → three `KnowledgeBase:*` retrievals in parallel → CommunicationAgent | Console screenshot |
+| [`trace8.png`](trace8.png) | Arithmetic question trace: Orchestrator → CommunicationAgent only | Console screenshot |
 | [`trace-cmd.txt`](trace-cmd.txt) | Text output of that `test` run: the three graded scenarios and their X-Ray trace ids | Terminal output |
 
 ## Stand-out work
