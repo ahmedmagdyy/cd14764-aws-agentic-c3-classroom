@@ -3,3 +3,5 @@ __pycache__/
 
 # Local environment / secrets (never commit)
 .env
+# Capstone submission config: resource IDs only, required by the review
+!project/starter/.env
